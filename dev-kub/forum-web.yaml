@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: forum-web
-  namespace: develop
+  name: forum-laravel-web
+  namespace: devsecops
   labels:
     app: frontend
 spec:
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: backend
-        image: jacksonlima91/forum-web:v1
+        image: abraaojs/forum-web-v1
         ports:
         - containerPort: 80

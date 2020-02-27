@@ -2,16 +2,18 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: ingress
+  namespace: api-herofit
   annotations:
     kubernetes.io/ingress.class: nginx
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    certmanager.k8s.io/acme-challenge-type: http01
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: kubernetes-rancher.hackathonshift.com.br
+  - host: api-herofit.devsecopsit.tech
     http:
       paths:
       - path: /
         backend:
-          serviceName: web
-          servicePort: 80
-  
+          serviceName: api-herofit
+          servicePort: 3002

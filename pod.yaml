@@ -2,11 +2,11 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: two-containers
-  namespace: test
+  namespace: devsecops
 spec:
   containers:
   - name: backend
-    image: jacksonlima91/forum-app:30
+    image: abraaojs/forum-app:30
 
   - name: mysql
     image: mysql:5.7

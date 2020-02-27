@@ -35,10 +35,10 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: "nfs"
+  storageClassName: 'nfs'
   resources:
     requests:
-      storage: 5Gi
+      storage: 2Gi
 ---
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment

@@ -8,7 +8,7 @@ data:
   APP_KEY: "base64:CR75WgluTHjhRsa6chcdP36J3nEH1cFrrWtHXNW2SFY="
   APP_DEBUG: "true"
   APP_LOG_LEVEL: "debug"
-  APP_URL: "http://localhost"
+  APP_URL: "http://forum-laravel.devsecopsit.tech"
 
   DB_CONNECTION: "mysql"
   DB_HOST: "database"

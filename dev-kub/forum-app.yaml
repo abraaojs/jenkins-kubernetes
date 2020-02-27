@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: forum-app
-  namespace: develop
+  name: forum-laravel
+  namespace: devsecops
   labels:
     app: backend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: backend
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: backend
-        image: jacksonlima91/forum-app:v1
+        image: abraaojs/forum-app-35
         ports:
-        - containerPort: 9000
+        - containerPort: 80
